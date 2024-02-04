@@ -22,7 +22,7 @@ export function ProductDataProvider({ children }) {
       updatedCart.items.push({ ...product, quantity: 1 });
     }
 
-    updatedCart.totalPrice += product.amount;
+    updatedCart.totalPrice =parseInt(updatedCart.totalPrice)+ parseInt(product.amount);
     setCart(updatedCart);
   };
 

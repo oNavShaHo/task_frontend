@@ -43,20 +43,46 @@ function Cart() {
   };
 
   return (
-    <div>
+    <div className="bg-blue-100 h-screen">
       <Navbar />
-      <div className="p-4">
-        <h2>Your Cart</h2>
+      <div className="p-4 ">
+        
         {cart.items.length > 0 ? (
-          <div>
-            <ul className="flex flex-col gap-4">
+          <div className="flex justify-center p-4 items-center gap-4">
+          
+            <ul className="flex flex-col p-4 bg-white gap-4">
+            <h2 className="text-xl ">Your Cart</h2>
               {cart.items.map((item) => (
                 <li  key={item.id}>
                   <Cartt remove={removeFromCart} data={item} />
                 </li>
               ))}
             </ul>
-            <p>Total Price: ${cart.totalPrice}</p>
+            <div className="bg-white w-[40vw] self-start flex flex-col gap-3 p-4">
+            <h1 className="text-xl">Price Details</h1>
+            <div className="flex justify-between">
+            <p>Price</p>
+            <p>{cart.totalPrice}</p>
+            </div>
+
+            <div className="flex justify-between" >
+            <p>Discount Price</p>
+            <p>100</p>
+            </div>
+
+            <div className="flex justify-between">
+            <p>Delivery Charge</p>
+            <p>50</p>
+            </div>
+
+            <hr/>
+
+            <div className="flex justify-between">
+            <p className="text-lg">Total</p>
+            <p>{cart.totalPrice-50}</p>
+            </div>
+            
+            </div>
           </div>
         ) : (
           <p>Your cart is empty.</p>
