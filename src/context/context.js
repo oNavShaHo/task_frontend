@@ -13,6 +13,7 @@ export function ProductDataProvider({ children }) {
   });
 
   const addToCart = (product) => {
+    
     const updatedCart = { ...cart };
     const existingItem = updatedCart.items.find((item) => item.id === product.id);
 
@@ -24,7 +25,9 @@ export function ProductDataProvider({ children }) {
 
     updatedCart.totalPrice =parseInt(updatedCart.totalPrice)+ parseInt(product.amount);
     setCart(updatedCart);
-  };
+ 
+
+;  };
 
   const placeOrderForItem = async (productId) => {
     try {

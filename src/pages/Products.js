@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 
 function Products() {
-  const { selectedProductData, placeOrderForItem } = useContext(ProductDataContext);
+  const { selectedProductData, placeOrderForItem ,addToCart } = useContext(ProductDataContext);
   const [modalVisible, setModalVisible] = useState(false);
 
   const handleBuyNow = async () => {
@@ -26,7 +26,7 @@ function Products() {
       <div className="absolute h-[40vh] top-[30%] left-[30%] w-[40vw] flex z-10 items-center justify-center bg-gray-100">
         <p className="flex text-center">Order placed</p>
 
-      <Link to='/Home'> Close <button >Close</button></Link>
+      <Link to='/Home'><button >Close</button></Link>
       </div>
       <div className="absolute ">{selectedProductData ? (
         <div className="flex disabled w-full h-screen opacity-50 relative">
@@ -101,7 +101,7 @@ function Products() {
               >
                 Buy Now
               </button>
-              <button className="border-x-2 border-y-2 bg-black text-white border-black px-8 py-2 text-[2rem]">
+              <button  onClick={addToCart} className="border-x-2 border-y-2 bg-black text-white border-black px-8 py-2 text-[2rem]">
                 Add to basket
               </button>
             </div>

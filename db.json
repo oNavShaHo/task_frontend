@@ -155,6 +155,36 @@
         }
       ],
       "totalPrice": 0
+    },
+    {
+      "id": "3bf9",
+      "userId": null,
+      "products": [
+        {
+          "productId": "4",
+          "quantity": 1
+        }
+      ],
+      "totalPrice": 0
+    },
+    {
+      "id": "edb9",
+      "userId": null,
+      "products": [
+        {
+          "productId": "2",
+          "quantity": 1
+        },
+        {
+          "productId": "3",
+          "quantity": 1
+        },
+        {
+          "productId": "4",
+          "quantity": 1
+        }
+      ],
+      "totalPrice": 1050
     }
   ],
   "favourites": []
