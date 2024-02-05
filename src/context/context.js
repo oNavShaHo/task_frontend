@@ -10,13 +10,16 @@ export function ProductDataProvider({ children }) {
   const [cart, setCart] = useState({
     items: [],
     totalPrice: 0,
+    totalItems:0
   });
 
+
+ 
   const addToCart = (product) => {
     
     const updatedCart = { ...cart };
     const existingItem = updatedCart.items.find((item) => item.id === product.id);
-
+     
     if (existingItem) {
       existingItem.quantity += 1;
     } else {
@@ -24,6 +27,7 @@ export function ProductDataProvider({ children }) {
     }
 
     updatedCart.totalPrice =parseInt(updatedCart.totalPrice)+ parseInt(product.amount);
+    updatedCart.totalItems++;
     setCart(updatedCart);
  
 
@@ -80,7 +84,7 @@ export function ProductDataProvider({ children }) {
   };
 
   return (
-    <ProductDataContext.Provider value={{ selectedProductData, setSelectedProductData, userId, setUserId, cart, setCart, addToCart, placeOrderForItem, placeOrderForCart }}>
+    <ProductDataContext.Provider value={{ selectedProductData, setSelectedProductData, userId, setUserId, cart, setCart, addToCart, placeOrderForItem, placeOrderForCart, }}>
       {children}
     </ProductDataContext.Provider>
   );

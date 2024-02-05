@@ -12,7 +12,7 @@ function Navbar() {
      <Link to='/home'>   <ul className='text-white'>Porducts</ul></Link>
      <Link to='/'> <ul className='text-white'>Sign Out</ul> </Link>
       <Link to='/cart'>  <ul><ShoppingCartIcon/></ul>
-      <p className='bg-red-500 text-white border-3 rounded-[100%] flex items-center justify-center relative top-[-2rem] left-6'>{cart.items.length}</p> 
+      <p className='bg-red-500 text-white border-3 rounded-[100%] flex items-center justify-center relative top-[-2rem] left-6'>{cart.totalItems}</p> 
       </Link>
       </div>
     </div>

@@ -11,6 +11,12 @@
       "name": "nav1",
       "email": "nav1@gmail.com",
       "password": "nav1"
+    },
+    {
+      "id": "6b50",
+      "name": "nav@gmail.com",
+      "email": "nav@gmail.com",
+      "password": "nav"
     }
   ],
   "products": [
@@ -185,6 +191,21 @@
         }
       ],
       "totalPrice": 1050
+    },
+    {
+      "id": "5816",
+      "userId": null,
+      "products": [
+        {
+          "productId": "5",
+          "quantity": 1
+        },
+        {
+          "productId": "6",
+          "quantity": 1
+        }
+      ],
+      "totalPrice": 1000
     }
   ],
   "favourites": []
