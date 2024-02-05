@@ -7,7 +7,7 @@ function Cart() {
   const { cart, setCart, placeOrderForCart } = useContext(ProductDataContext);
 
   const navigate = useNavigate();
-
+  console.log(cart);
   function place() {
     placeOrderForCart();
     alert("order placed");

@@ -10,11 +10,10 @@ export function ProductDataProvider({ children }) {
   const [cart, setCart] = useState({
     items: [],
     totalPrice: 0,
-    totalItems:0
+   totalItems:0
   });
 
 
- 
   const addToCart = (product) => {
     
     const updatedCart = { ...cart };
@@ -84,7 +83,7 @@ export function ProductDataProvider({ children }) {
   };
 
   return (
-    <ProductDataContext.Provider value={{ selectedProductData, setSelectedProductData, userId, setUserId, cart, setCart, addToCart, placeOrderForItem, placeOrderForCart, }}>
+    <ProductDataContext.Provider value={{ selectedProductData, setSelectedProductData, userId, setUserId, cart, setCart, addToCart, placeOrderForItem, placeOrderForCart }}>
       {children}
     </ProductDataContext.Provider>
   );
